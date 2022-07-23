@@ -1,0 +1,13 @@
+p {
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+li {
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+}
+textWrap {
+  margin-right: 30px;
+}
