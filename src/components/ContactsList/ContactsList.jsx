@@ -6,16 +6,16 @@ export const ContactsList = ({ contactsList, onDelete }) => {
     <ul>
       {contactsList.map(({ id, name, phone }) => {
         return (
-          <li key={id}>
-            <div className="textWrap">
-              <p>Name: {name}</p>
-              <p>Phone: {phone}</p>
+          <li className={styles.item} key={id}>
+            <div className={styles.textWrap}>
+              <p className={styles.text}>Name: {name}</p>
+              <p className={styles.text}>Phone: {phone}</p>
             </div>
 
-            <div className="btn-wrap">
+            <div className={styles.btnWrap}>
               <button
+                className={styles.button}
                 type="button"
-                className="btn btn-link card-link"
                 onClick={() => onDelete(id)}
               >
                 Delete

@@ -44,12 +44,7 @@ export class App extends Component {
 
     return (
       <div className="backimage">
-        <h1>Phonebook</h1>
-
         <ContactForm addContactData={this.addContactData} />
-
-        <h2>Contacts</h2>
-
         <ContactFilter filter={filter} handlerFilter={this.handlerFilter} />
 
         <ContactsList

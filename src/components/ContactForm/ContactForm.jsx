@@ -26,32 +26,39 @@ export class ContactForm extends Component {
   render() {
     const { name, phone } = this.state;
     return (
-      <form onSubmit={this.onSubmit}>
-        <label>
-          Name
-          <input
-            type="text"
-            name="name"
-            value={name}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Phone
-          <input
-            type="phone"
-            name="phone"
-            value={phone}
-            required
-            onChange={this.handleChange}
-          />
-        </label>
+      <>
+        <form className={styles.form} onSubmit={this.onSubmit}>
+          <h1>Phonebook</h1>
+          <label className={styles.label}>
+            Name
+            <input
+              className={styles.input}
+              type="text"
+              name="name"
+              value={name}
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              required
+              onChange={this.handleChange}
+            />
+          </label>
+          <label className={styles.label}>
+            Phone
+            <input
+              className={styles.input}
+              type="phone"
+              name="phone"
+              value={phone}
+              required
+              onChange={this.handleChange}
+            />
+          </label>
 
-        <button type="submit">Add contacts</button>
-      </form>
+          <button className={styles.button} type="submit">
+            Add contacts
+          </button>
+        </form>
+      </>
     );
   }
 }
