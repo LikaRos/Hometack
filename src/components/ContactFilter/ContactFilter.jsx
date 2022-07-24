@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './ContactFilter.module.css';
 export const ContactFilter = ({ filter, handlerFilter }) => {
   return (
@@ -17,4 +18,9 @@ export const ContactFilter = ({ filter, handlerFilter }) => {
       </form>
     </>
   );
+};
+
+ContactFilter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handlerFilter: PropTypes.func.isRequired,
 };

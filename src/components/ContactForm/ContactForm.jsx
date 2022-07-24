@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
@@ -19,7 +20,7 @@ export class ContactForm extends Component {
     const contact = { ...this.state, id };
 
     this.props.addContactData(contact);
-
+    //  console.log(this.props);
     this.setState({ name: '', phone: '' });
   };
 
@@ -62,3 +63,13 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  contact: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+    })
+  ),
+};
