@@ -72,4 +72,5 @@ ContactForm.propTypes = {
       phone: PropTypes.string.isRequired,
     })
   ),
+  addContactData: PropTypes.func.isRequired,
 };
